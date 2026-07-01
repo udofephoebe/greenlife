@@ -1,37 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"> </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenlife — Home</title>
+    <link rel="stylesheet" href="/Website/styles2.css">
+    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <header>
-        <img src="removed logo.png"  alt="Greenlife logo" height="70px" width="70px">
-        <nav style="left: auto;">
-           <button> <a href="intro.html"> ABOUT US</a></button>
-           <button> <a href="order.html"> ORDER FORM</a></button>
-           <button> <a href="products.html"> OUR PRODUCTS</a></button>
-         </nav>
-
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo"><img src="removed logo.png" alt="Greenlife logo"></a>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation"></button>
+            <nav id="main-nav" class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="intro.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="order.html">Order</a></li>
+                </ul>
+            </nav>
+            <div class="cart"><a href="order.html">Cart (<span id="cart-count">0</span>)</a></div>
+        </div>
     </header>
     <main>
-      <div>
-        <article>
-            <h1 style="text-align: center;border: 6px; border:solid;">WELCOME TO GREENLIFE!</h1>
-            <h2><b>Brief Introduction!</b></h2>
-            <p>Welcome to Greenlife, Greenlife is a multinational company, engaging itself in distribution of herbal products and other commodities through <b>DIRECT SALE MARKETING.</b><br>
-                The vision and determination of the chairperson is to take the <b>TRADITIONAL CHINESE MEDICINE (T.C.M)</b>
-                and its treasures to everybody, everywhere in the world....
-            </p>
-           </article>
-    
-      </div>
+        <section class="hero">
+            <div class="container">
+                <h1>Welcome to Greenlife</h1>
+                <p class="lead">Natural, time-tested Traditional Chinese Medicine and herbal products — quality you can trust.</p>
+                <p class="hero-cta"><a class="btn primary" href="products.html">Explore Products</a> <a class="btn" href="intro.html">Learn More</a></p>
+            </div>
+        </section>
+
+        <section class="about container">
+            <article>
+                <h2>Brief Introduction</h2>
+                <p>Greenlife is a multinational company specializing in the distribution of herbal products and other commodities through <strong>direct sales marketing</strong>. Our mission is to bring the benefits of Traditional Chinese Medicine (T.C.M) to people everywhere.</p>
+                <p>We combine classical formulas with modern quality control and manufacturing standards to deliver safe, effective products.</p>
+            </article>
+        </section>
     </main>
-    <footer style="text-align: center;">
-        <p>Best Of The Best! One Big Family!</p>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Best Of The Best — One Big Family.</p>
+            <p class="muted">&copy; <span id="year">2026</span> Greenlife International</p>
+        </div>
     </footer>
-   
-  
 </body>
 </html>

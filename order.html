@@ -1,26 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"> </script>
-   
-    <title>ORDER FORM</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order — Greenlife</title>
+    <link rel="stylesheet" href="/Website/styles2.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <img src="removed logo.png" alt="Greenlife logo" height="70px" width="70px">
-        <nav style="left: auto;">
-            <button> <a href="intro.html"> ABOUT US</a></button>
-            <button> <a href="./index.html"> HOME</a></button>
-            <button> <a href="products.html"> OUR PRODUCTS</a></button>
-          </nav>
- 
-
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo"><img src="removed logo.png" alt="Greenlife logo"></a>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation"></button>
+            <nav id="main-nav" class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="intro.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="order.html">Order</a></li>
+                </ul>
+            </nav>
+            <div class="cart"><a href="order.html">Cart (<span id="cart-count">0</span>)</a></div>
+        </div>
     </header>
-    <main>
-<img back-ground  src="" alt="">
+
+    <main class="container order-page">
+        <section>
+            <h1>Place an Order</h1>
+            <p class="lead">Fill out this simple form and we will contact you to confirm your order.</p>
+
+            <section class="cart-section">
+  <h2>Your Cart</h2>
+  <table id="cart-table">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Remove</th>
+      </tr>
+    </thead>
+    <tbody id="cart-list"></tbody>
+  </table> <br>
+  <button id="clear-cart" class="btn danger">Clear Cart</button>
+</section>
+        
+            <form id="order-form" class="order-form" action="https://formsubmit.co/el/pilagu" method="post" >
+                <input type="hidden" name="_subject" value="New Greenlife Product Order">
+                <input type="hidden" name="text" value="https:///thankyou.html">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="cart" id="cart-data">
+
+                <label>Product
+                    <input type="text" id="product" name="product" placeholder="Product name (or leave blank)" />
+                </label>
+                <label>Quantity
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" />
+                </label>
+                <label>Your name
+                    <input type="text" id="name" name="name" required />
+                </label>
+                <label>Phone Number
+                    <input type="text" id="contact" name="contact" required />
+                </label>
+                <label>Email
+                    <input type="text" id="email" name="email" required />
+                </label>
+                <label>Address
+                    <input type="text" id="address" name="address" required />
+                </label>
+                <button class="btn primary" type="submit">Send Order</button>
+            </form> <br>
+            <a href="#" class="whatapp-btn" onclick="sendWhatsApp()"> Send Order Via Whatsapp</a>
+
+           
+        </section>
     </main>
-     </footer>
-    
+
+    <footer class="site-footer">
+        <div class="container"><p>Best Of The Best — One Big Family.</p></div>
+    </footer>
+   <script>
+   
+    function updateCartCount(){
+  const cart = JSON.parse(sessionStorage.getItem('gl_cart_items')) || [];
+  document.getElementById('cart-count').textContent = cart.length;
+}
+
+function loadCart(){
+  const cart = JSON.parse(sessionStorage.getItem('gl_cart_items')) || [];
+  const list = document.getElementById('cart-list');
+  list.innerHTML = '';
+
+  cart.forEach((item, index) => {
+    const row = document.createElement('tr');
+
+    // Product name
+    const nameCell = document.createElement('td');
+    nameCell.textContent = item.title;
+    row.appendChild(nameCell);
+
+    // Quantity input
+    const qtyCell = document.createElement('td');
+    const qtyInput = document.createElement('input');
+    qtyInput.type = 'number';
+    qtyInput.min = '1';
+    qtyInput.value = item.quantity || 1;
+    qtyInput.addEventListener('change', () => {
+      cart[index].quantity = parseInt(qtyInput.value);
+      sessionStorage.setItem('gl_cart_items', JSON.stringify(cart));
+    });
+    qtyCell.appendChild(qtyInput);
+    row.appendChild(qtyCell);
+
+    // Remove button
+    const removeCell = document.createElement('td');
+    const delBtn = document.createElement('button');
+    delBtn.textContent = 'Remove';
+    delBtn.className = 'btn danger';
+    delBtn.addEventListener('click', () => {
+      cart.splice(index, 1);
+      sessionStorage.setItem('gl_cart_items', JSON.stringify(cart));
+      loadCart();
+      updateCartCount();
+    });
+    removeCell.appendChild(delBtn);
+    row.appendChild(removeCell);
+
+    list.appendChild(row);
+  });
+}
+
+// Clear all items
+document.getElementById('clear-cart').addEventListener('click', () => {
+  sessionStorage.removeItem('gl_cart_items');
+  loadCart();
+  updateCartCount();
+});
+
+// Inject cart into hidden field on submit
+document.getElementById('order-form').addEventListener('submit', () => {
+  const cart = sessionStorage.getItem('gl_cart_items');
+  document.getElementById('cart-data').value = cart;
+});
+
+// Run on page load
+document.addEventListener('DOMContentLoaded', () => {
+  updateCartCount();
+  loadCart();
+});
+
+   </script>
 </body>
 </html>

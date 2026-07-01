@@ -1,44 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-    <title>Our Products</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1-0">
+    <title>Our Products — Greenlife</title>
+    <link rel="stylesheet" href="/Website/styles2.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <img src="removed logo.png" alt="Greenlife logo" height="70px" width="70px">
-        <nav style="left: auto;">
-            <button> <a href="intro.html"> ABOUT US</a></button>
-            <button> <a href="order.html"> ORDER FORM</a></button>
-            <button> <a href="index.html"> HOME </a> </button>
-            <button> <a href="#bottom"> TO PAGE BOTTOM</a></button>
-          </nav>
-          <p><b>WELCOME TO OUR PRODUCT PAGE!</b></p>
-
+    <header class="site-header" id="top">
+        <div class="container header-inner">
+            <a href="index.html" class="logo"><img src="removed logo.png" alt="Greenlife logo"></a>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation"></button>
+            <nav id="main-nav" class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="intro.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="order.html">Order</a></li>
+                </ul>
+            </nav>
+            <div class="cart"><a href="order.html">Cart (<span id="cart-count">0</span>)</a></div>
+        </div>
+       
+        <nav class="navbar">
+            <div class="hamburger"> &#9776;</div>
+            <ul class="nav-links">
+               <li><a href="#men">Men's Healthcare</a></li>
+               <li><a href="#women">Women's Healthcare</a></li>
+               <li><a href="#brain"> Brain,Blood Circulation</a></li>
+               <li><a href="#ulcer">Ulcer,Gastritis & Infections</a></li>
+               <li><a href="#anxiety"> Anxiety & Depression</a></li>
+               <li><a href="#beauty">Beauty & Slimming</a></li>
+               <li><a href="#diabetes">Diabetes & Highsugar</a></li>
+               <li><a href="#pain">Pain & Arthritis</a></li>
+               <li><a href="#eye">Eyes Healthcare</a></li>
+               <li><a href="#balm">Greenlife Herbal Balm</a></li>
+               <li><a href="#tea"> Greenlife Herbal Tea</a></li>
+            </ul>
+        </nav>
+    
+         <h1>Our Products</h1>
+            <p style="color: white;" class="lead">Natural formulas across health categories — men's, women's, cardiovascular, beauty and more.</p>
+        
     </header>
+
     <main>
-        <section id="top">
-            <h1>MEN'S HEALTHCARE</h1>
-            <img src="vigo rg.png" alt="Vigo image" height="300px" width="300px">
-           
-            <p>
-                <h3><b>VIGO CAPSULE(Sexual Weakness - Quick action)</b><br></h3>
-                Vigo capsule is a 100% herbal product based on a secret formula from China. The pure natural formula will improve
-                sexual potency, enhance one's energy and endurance level.
-                <p>
-                <b>FUNCTIONS</b><br>
-                To reinforce the vital energy, strengthen sexual function. 
-                Use for sexual weakness, impotence, premature ejaculation and those who just wish to improve their sexual <br>
-               
-                </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
-
-
-            </p>
-        </section>
-        <section>
-            <img src="men fo.png" alt="Image Of Men Formula" height="300px" width="300px">
+       <section id="men">
+        <h2>Men's Healthcare</h2>
+         <div class="product-grid">
+             
+            <div   class="product-card">
+                <img src="vigo rg.png" alt="Vigo image">
+                
+                    <h3>VIGO CAPSULE (Sexual Weakness — Quick action)</h3>
+                    <p>Vigo capsule is a 100% herbal product based on a secret formula from China. The pure natural formula will improve sexual potency, enhance energy and endurance.</p>
+                    <p><strong>Functions:</strong> Reinforce vital energy and strengthen sexual function. Use for sexual weakness, impotence, premature ejaculation.</p>
+                    <p class="price"> &#8358; 18,500 </p>
+                    <a href="order.html" class="btn order-btn">Order Now</a>
+                   
+            </div>
+            <div  class="product-card">
+                 <img src="men fo.png" alt="Image Of Men Formula" height="300px" width="300px">
             <p>
                 <h3><b>MEN FORMULA PILLS(Low Sperm Count And Infertility)</b></h3><br>
                 <b>Functions & Indications:</b><br>
@@ -48,11 +71,14 @@
 
 
             </p>
-            <a href="order.html"><button>ORDER NOW</button></a>
+            <p class="price"> &#8358; 18,500 </p>
+                     <a href="order.html" class="btn  order-btn">Order Now</a>
+            
 
-        </section>
-        <section>
-            <img src="prostate tab.jpeg" alt="Image Of Prostasure Tab" height="300px" width="300px">
+
+            </div>
+            <div class="product-card">
+                <img src="prostate tab.jpeg" alt="Image Of Prostasure Tab" height="300px" width="300px">
             <p>
                 <h3><b>Prostasure Tablet(Prostate Enlargement)</b></h3><br>
                 <b>Functions & Indications:</b><br>
@@ -62,11 +88,13 @@
                 
 
             </p>
-            <a href="order.html"><button>ORDER NOW</button></a>
+            <p class="price"> &#8358; 13,500 </p>
+                       <a href="order.html" class="btn  order-btn">Order Now</a>
             
-        </section>
-        <section>
-            <img src="ki care.jpeg" alt="Ki Care image" height="300px" width="300px">
+            </div>
+
+            <div class="product-card">
+                 <img src="ki care.jpeg" alt="Ki Care image" height="300px" width="300px">
             <p>
                 <h3><b>Ki Vital Care Pill( Waist Pain, Kidney Weakness)</b></h3> <br>
                <b>Ki Vital Care Pills</b> is extracted from selected herbal ingredients with advanced mordern technology. It is an 
@@ -82,12 +110,17 @@
 
 
             </p>
-            <a href="order.html"><button>ORDER NOW</button></a>
+            <p class="price"> &#8358; 13,000 </p>
+                       <a href="order.html" class="btn  order-btn">Order Now</a>
+           
 
-        </section>
-        <div>
-            <section>
-                <h1><b>WOMEN'S HEALTHCARE</b></h1><br>
+            </div>
+       </section>
+           <section id="women">
+             <h2><b>WOMEN'S HEALTHCARE</b></h2><br>
+           <div class="product-grid">
+             <div class="product-card">
+           
                 <img src="mother q.PNG" alt="Mother Plus Image" height="300px" width="300px">
                 <p>
                     <h3><b>Mother Qui Tea(After-birth Healthcare)</b></h3> <br>
@@ -102,22 +135,26 @@
 
                 
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
+               <p class="price"> &#8358; 8,500 </p>
+                       <a href="order.html" class="btn  order-btn">Order Now</a>
+           
 
-
-
-            </section>
-            <section>
-                <img src="red peony.jpeg" alt="Red peony" height="300px" width="300px">
+           </div>
+           <div class="product-card">
+             <img src="red peony.jpeg" alt="Red peony" height="300px" width="300px">
                 <h3><b>Red Peony Capsule(Fibroid,Stasis, Uterine Bleeding)</b></h3> <br>
             <p>
                 Function & Indications: Remove fixed abdominal masses. Painful Blood Stasis in the uterus , invigorates Blood. <br>
                 <b>Related indications:</b> Fibroid , other hard lumps in lower abdomen with mensturation, pain from endometriosis, irregular menstruation,menopausal disorder , blood stasis after miscarriage. <br>
                 
             </p>
-            <a href="order.html"><button>ORDER NOW</button></a>
-            </section>
-            <section>
+             <p class="price"> &#8358; 16,100 </p>
+                     <a href="order.html" class="btn  order-btn">Order Now</a>
+           
+            
+           </div>
+            <div class="product-card">
+
                 <img src="pid care.PNG" alt="Pidcare image" height="300px" width="300px" >
                 <p>
                     <h3><b>Pidcare Tablet(Pelvic & Viginal Healthcare)</b></h3><br>
@@ -127,10 +164,12 @@
                 
 
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
-            </section>
-            <section>
-                <img src="f qui.jpeg" alt="F-Qui Tablet" height="300px" width="300px">
+                <p class="price"> &#8358; 14,500 </p>
+                    <a href="order.html" class="btn  order-btn">Order Now</a>
+                
+            </div>
+            <div class="product-card">
+                 <img src="f qui.jpeg" alt="F-Qui Tablet" height="300px" width="300px">
                 <p>
                     <h3><b>F-Qui Tablet(Blood Tonic & Women's Pain)</b></h3> <br>
                     <b>Functions & Indications:</b>  Blood Tonic, active blood circulation, nourishes the female reproductive system. helping to restore menstural regularity, reduction in symptoms related to PMS and 
@@ -138,11 +177,13 @@
                    
 
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
+                 <p class="price"> &#8358; 13,900 </p>
+                      <a href="order.html" class="btn  order-btn">Order Now</a>
+              
 
-            </section>
-            <section>
-                <img src="camopill2.jpeg" alt=" Camopill image"height="300px" width="300px">
+            </div>
+            <div class="product-card">
+                 <img src="camopill2.jpeg" alt=" Camopill image"height="300px" width="300px">
                 <p>
                     <h3><b>Camopill (Tumor,Stasis , Breast Cancer, Enlarged liver/spleen)</b></h3><br>
                     Camopill is a traditional formula for blood stasis such as fibroid or tumor in thr chest or breast or abdomen. However , it is also good for males and females whose liver & spleen are weak in functions or blood circulation. <br>
@@ -150,11 +191,13 @@
                     <b>Function & Indications:</b> It activates the blood, remove blood stasis , disintegrate mass chiefly in the abdomen or uterus casused by blood stasis . Restore normal mensuration in cases of pathological anemia. Used for fibroid , anemia , suppressed mensuration ,mass in abdomen with fixed shapes and localized pain ,
                     hepatosplenomegaly(enlarged liver & spleen), cirrhosis,tumor.
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
-
-            </section>
-            <section>
-                <img src="pheonix.jpeg" alt="Phoenix pill" height="300px" width="300px">
+                  <p class="price"> &#8358; 18,500 </p>
+                    <a href="order.html" class="btn  order-btn">Order Now</a>
+              
+                
+            </div>
+           <div class="product-card">
+            <img src="pheonix.jpeg" alt="Phoenix pill" height="300px" width="300px">
                 <p>
                     <h3><b>Phoenix Pill(Reproductive System Repair)</b></h3> <br>
                     <b>Phoenix Pill</b> is an acient formula for women daily supplement especially when their reproductiive system is in disorder caused by blood shortage pressure , stress, malnutrition, miscarriage and production. it can nourish the blood production supply QI tonify both YIN & YANG. <br>
@@ -167,11 +210,17 @@
                         <li>It restores the reproductiive  system being flourished. </li>
                     </ul>
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
+                 <p class="price"> &#8358; 15,500 </p>
+                   <a href="order.html" class="btn  order-btn">Order Now</a>
 
-            </section>
-            <section>
-                <h1><b>BRAIN,BLOOD CIRCULATION & ENERGY</b></h1> <br>
+           </div>
+           </div>
+           </section>
+           <section id="brain">
+            <h2><b>BRAIN,BLOOD CIRCULATION & ENERGY</b></h2> <br>
+           <div class="product-grid">
+             <div class="product-card">
+             
                 <img src="st 2.jpeg" alt="St Pills image" height="300px" width="300px" >
                 <p>
                     <h3><b>ST PILLS(Stroke & Brain Damage)</b></h3><br>
@@ -186,13 +235,12 @@
                     <b>Indications:</b> Used for hemorrhagic apoplexy , for ischemic apoplexy,for cerebral thrombosis , cerebral embolism, for cerebral arteriosclerosis, for facial paralysis , ischemic heart disease & angina pectoris & their sequela like hemiplegia , numbness of the limbs, twisting mouth and eyelid and language disturbance . 
                     For long-term preventive use in the above mentioned.
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
+                 <p class="price"> &#8358; 23,000 </p>
+                       <a href="order.html" class="btn  order-btn">Order Now</a>
 
-
-               
-            </section>
-            <section>
-                <img src="double g.PNG" alt="Double Ginseng imaage" height="300px" width="300px">
+           </div>
+           <div class="product-card">
+             <img src="double g.PNG" alt="Double Ginseng imaage" height="300px" width="300px">
                 <p>
                     <h3><b> Double Ginseng Capsule(Energy & Blood circulation) </b></h3> <br>
                     Double Ginseng capsule is processed from extract of famous Chinese ginsengs which are wildly planted in high mountains in cold
@@ -206,13 +254,12 @@
                     Also it is good for cardiovascular/cerebrovascular diseases.
 
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
+                 <p class="price"> &#8358; 15,000 </p>
+                       <a href="order.html" class="btn  order-btn">Order Now</a>
 
-               
-                
-            </section>
-            <section>
-                <img src="dashen.png" alt="Danshen Image" height="300px" width="300px" >
+           </div>
+          <div class="product-card">
+            <img src="dashen.png" alt="Danshen Image" height="300px" width="300px" >
                 <p>
                     <h3><b>Dashen Plus (Heart Disease--- Treatment)</b></h3> <br>
                     Danshen Plus Tablet is processed from extract of some valuable Chinese herbs. Based on an old formula , we improved the processing technology with a result of higher performance.
@@ -225,14 +272,12 @@
                     For Coronary heart disease, angina pectoris and oppressed feeling in the chest . Sysmptoms like fixed stabbing , strong sharp pain , possibly worse at night, heart palpitations may be present . 
                     Also for dysmenorrhea or amenorrhea , and in bruises.
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
+                 <p class="price"> &#8358; 12,000 </p>
+                       <a href="order.html" class="btn  order-btn">Order Now</a>
 
-
-                
-
-            </section>
-            <section>
-                <img src="B-CARE.png" alt="B-Care Tablet  image"height="300px" width="300px"  >
+          </div>
+           <div class="product-card">
+             <img src="B-CARE.png" alt="B-Care Tablet  image"height="300px" width="300px"  >
                 <p>
                     <h3><b>B-Care Tablet (Stroke, Heart Disease & Blood Circulation)</b></h3> <br>
                     It was extracted from the green leaf of Ginkgo trees , which is native of Asia . It was well studied and has been reported that B-Care Tablet can increase
@@ -245,12 +290,17 @@
                     protect cerebral tissues, and improve respiratory function . It is taken to improve the function of vascular system , to regulate the vascular tension , to maintain the normal permeability of vessels 
                     and the pressure of arteries and veins of the whole body . it can also ameliorate damaged vessels , improve blood system, promote and increase the central neural system , protect cerebral tissues and improve respiratory function. 
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
+                 <p class="price"> &#8358; 12,000 </p>
+                     <a href="order.html" class="btn  order-btn">Order Now</a>
 
-
-            </section>
-            <section>
-                <h1>Ulcer , Gastritis & Infections</h1>
+           </div>
+           </div>
+           </section>
+          <section id="ulcer">
+             <h2>Ulcer , Gastritis & Infections</h2>
+             <div class="product-grid">
+                <div class="product-card">
+            
                 <img src="chitomell.jpeg" alt="Chitomeal Image" height="300px" width="300px" >
                 <p>
                     <h3><b>Chitomeal Pills (Ulcer , Dampness & Gastritis)</b></h3> <br>
@@ -259,21 +309,21 @@
                     chronic poor appetite , for abdominal distention , for nausea , for acid regurgitation , for chronic Gastritis, for chronic diarrhea or loose stools , for <b>Duodenal ulcer</b>,
                     for chronic hepatitis , for irritable bowel syndrome (IBS) morning sickness.
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
+               <p class="price"> &#8358; 11,500 </p>
+                      <a href="order.html" class="btn  order-btn">Order Now</a>
+           </div>
+            <div class="product-card">
 
-
-            </section>
-            <section>
-                <img src="Kordy_Cap.png" alt="Kordy_cap" height="300px" width="300px">
+                 <img src="Kordy_Cap.png" alt="Kordy_cap" height="300px" width="300px">
                 <p>
                     <h3><b>Kordy Capsule( Infections,Gonorrhea)</b></h3> <br>
                     <b>Indications:</b> Used for diarrhea, gonorrhea, typhoid, vaginal and urinary tract infection,
                     prostrate or other diseases caused by inflammation or infection.
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
-
-            </section>
-            <section>
+                 <p class="price"> &#8358; 13,500 </p>
+                      <a href="order.html" class="btn  order-btn">Order Now</a>
+            </div>
+            <div class="product-card">
                 <img src="detoxin.png" alt="Detoxin Image" height="300px" width="300px">
                 <p>
                     <h3><b>Detoxin Tablet(Toxins, Toxic Heat)</b></h3> <br>
@@ -286,11 +336,17 @@
                     <b>symptoms</b>  include constipation ,fever , inflamed throat or gums , red irritated eyes , ear-ache, toxic swellings, delirium, toothache,headache, dizziness and oral ulcer ,fever.
             
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
-
-            </section>
-            <section>
-                <h1><b>ANXIETY & DEPRESSION</b></h1> <br>
+                 <p class="price"> &#8358; 12,000 </p>
+                     <a href="order.html" class="btn  order-btn">Order Now</a>
+            </div>
+            
+             </div>
+          </section>
+          <section id="anxiety">
+             <h2><b>ANXIETY & DEPRESSION</b></h2> <br>
+            <div class="product-grid">
+                <div class="product-card">
+               
                 <img src="relaxing pill.png" alt="Relaxing pill Image" height="300px" width="300px"  >
                 <p>
                     <h3><b>Relaxing Pills(Anxiety & Depression)</b></h3> <br>
@@ -304,11 +360,17 @@
                     <br> <b>Typical symptoms</b> both for men and women are difficulty in sleeping, bad temper, red, sore eyes, mouth ulcers, acne or skin rash , eczema , dermatitis , headache , dizziness , fatigue, easily get sweat. For some women , because of the depression, they may experience other symptoms like menstrual
                     disorder and blood shortage.
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
+                 <p class="price"> &#8358; 12,000 </p>
+                      <a href="order.html" class="btn  order-btn">Order Now</a>
+                  </div>
 
-            </section>
-            <section>
-                <h1><b> BEAUTY & SLIMMING</b></h1> <br>
+            </div>
+          </section>
+           <section id="beauty">
+             <h2><b> BEAUTY & SLIMMING</b></h2> <br>
+             <div class="product-grid">
+                 <div class="product-card">
+            
                 <img src="SHADE KIT.PNG" alt="Shade kit Image" height="300px" width="300px">
                 <p>
                     <h3><b>Shade Kit Capsule ( Weight Losing)</b></h3> <br>
@@ -322,10 +384,12 @@
                     <b>Functions &  Indications:</b> <br>
                     Slimming , weight- losing , obesity.
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
-            </section>
-            <section>
-                <img src="alovera.PNG" alt="Alovera Image" height="300px" width="300px">
+                 <p class="price"> &#8358; 18,000 </p>
+                       <a href="order.html" class="btn  order-btn">Order Now</a>
+           </div>
+         
+            <div class="product-card">
+                 <img src="alovera.PNG" alt="Alovera Image" height="300px" width="300px">
                 <p>
                     <h3><b>Alovera Capsule(Constipation, Obesity, Pimples & Anti-aging)</b></h3> <br>
                     <ol>
@@ -339,10 +403,17 @@
                 <p>
                     <b>Indications:</b> Constipation , weight-losing, teen-acne, chronic acne and pimples, anti-agiing , chronic inflammatory problems, such as chronic throat inflammation , tonsillitis, etc.
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
-            </section>
-            <section>
-                <h1><b>DIABETES AND HIGH SUGAR</b></h1> <br>
+                 <p class="price"> &#8358; 0,000 </p>
+                    <!-- <button>Order Now</button> -->
+            </div>
+             </div>
+            
+           </section>
+          <section id="diabetes">
+             <h2><b>DIABETES AND HIGH SUGAR</b></h2> <br>
+            <div class="product-grid">
+                 <div class="product-card">
+             
                 <img src="glutrin.jpeg" alt="Glutrins Pill Image"  height="300px" width="300px">
                 <p>
                     <h3><b>Glutrins Pills (Diabetes , Tonic for basic vigor elements)</b></h3> <br>
@@ -355,22 +426,29 @@
                     <b>Used for the following symptoms</b> Back pain, lack of strength in the knees and legs , losing hair , bad gum and teeth , irregular menses , ringing in the ears , red face, hot body , uneasiness , dry and cracked lips , dark red tongue with yellow fur , or even with cracks.
                     Recent findings in use also included as anti-oxidant , anti-cancer , prevents prostate enlargement, geratic dementia , and type II diabetes, together with the use of blood and memory pills to improve white blood cell count caused by chemotherapy, chronic infection of the sinus area.
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
-            </section>
-            <section>
-                <img src="Dial B.jpeg" alt="Dial B Image" height="300px" width="300px">
+                <p class="price"> &#8358; 15,000 </p>
+                    <a href="order.html" class="btn  order-btn">Order Now</a>
+           </div>
+            <div class="product-card">
+                 <img src="Dial B.jpeg" alt="Dial B Image" height="300px" width="300px">
                 <p>
                     <h3><b>Dial B (Diabetes)</b></h3>
                     <b>Functions & Indications:</b> <br>
                     Nourish kidney-yin, benefits qi and promote generation of body fluid. Used for diabetes mellitus due to deficiency of qi & yin(non-insulin dependant diabetes) manifested as thirst , polydipsia, polyphagia, polyorexia, emaciation, tiredness, fatigue, shortness of breath , indolent about speaking.
 
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
+                <p class="price"> &#8358; 19,000 </p>
+                       <a href="order.html" class="btn  order-btn">Order Now</a>
 
-            </section>
+            </div>
+            </div>
+          </section>
             <!--The code is really long, and this is my first every website!!-->
-            <section>
-                <h1><b>Pain & Arthritis</b></h1> <br>
+            <section id="pain">
+                 <h2><b>Pain & Arthritis</b></h2> <br>
+               <div class="product-grid">
+                 <div class="product-card">
+               
                 <img src="arthro power 1.png" alt="Arthro Power image" height="300px" width="300px" >
                 <p>
                    <h3><b>Arthro Power(Universal Pain Killer)</b></h3> <br>
@@ -381,10 +459,11 @@
                     <b>Function & Indications:</b> <br>
                     Soothing the channels and quickening the network vessels, dissipating wind and transforming stasis. Used for Body pains( neck , shoulder , waist , legs) caused by rhemumatism, arthritis, spondlysis, strain of lumber muscles, gout etc. 
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
-            </section>
-            <section>
-                <img src="spinsure pill.PNG" alt="Spinsure pill image" height="300px" width="300px">
+                 <p class="price"> &#8358; 12,500 </p>
+                      <a href="order.html" class="btn  order-btn">Order Now</a>
+            </div>
+            <div class="product-card">
+                 <img src="spinsure pill.PNG" alt="Spinsure pill image" height="300px" width="300px">
                 <p>
                     <h3><b>Spinsure Pills (Arthritis , Numbness & Pain)</b></h3> <br>
                     Spinsure Pills is designed to use some famous herbal extract to processed through high technology in GMP standard factory. it oustanding pain stopping effect and treatment performance have been accepted by more African friends.
@@ -395,10 +474,11 @@
                     Promotes (stimulates) smooth circulation of blood and vital energy to relax muscles and tendons, strengthen tendons and bones.
                     <b>Used for </b> rheumatic or rheumatoid arthritis with numbness of the limbs and aching of the back and legs, sprain , traumatic injury with pain.
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
-            </section>
-            <section>
-                <img src="Spinsure tab.png" alt="spinsure tab image" height="300px" width="300px" >
+                 <p class="price"> &#8358; 12,000 </p>
+                       <a href="order.html" class="btn  order-btn">Order Now</a>
+            </div>
+           <div class="product-card">
+             <img src="Spinsure tab.png" alt="spinsure tab image" height="300px" width="300px" >
                 <p>
                     <h3><b>Spinsure Tablets (Spondlysis) </b></h3> <br>
                     <b>Functions & Indications:</b> <br>
@@ -406,11 +486,16 @@
                     or in spontaneous multiplicative spondylitis . Used for joint pain , tendon pain , bone hyperplasia, vertebral calcification following injury , chronic cervical subluxation , spinal inflammation , spondylosis. Slipped or dislocated intervertebral disc.
 
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
+                 <p class="price"> &#8358; 13,500 </p>
+                       <a href="order.html" class="btn  order-btn">Order Now</a>
+           </div>
+               </div>
             </section>
-            <section>
-                <h1><b> EYES HEALTHCARE  </b></h1> <br>
-                <img src="I-CLEAR.png" alt="I-clear image" height="300px" width="300px" >
+           <section id="eye">
+            <h2><b> EYES HEALTHCARE  </b></h2> <br>
+            <div class="product-grid">
+                <div class="product-card">
+                      <img src="I-CLEAR.png" alt="I-clear image" height="300px" width="300px" >
                 <p>
                     <h3><b>I-Clear (Universal Solution To Eye Promblem) </b></h3> <br>
                     I-Clear is a renowned ancient <b>Chinese Herbal Formula</b> used for improving vision. It is used for easily-tired eyes, light or wind feared eyes , blurred eyes, easily-tearing eyes , red or dry eyes.
@@ -419,32 +504,42 @@
                     It can nourish the kidney and liver , improves eye-sight. It is used for deficiency of both liver Yin and kidney Yin, foreign body sensation in the eye & photophobia, blurring of vision, tearing against wind , conjuctive congestion with pain and swelling of eyes, dizziness and blurred vision, constipation with dry stool and yellow urine. 
                     Replenishes liver and kidney , nourishes liver blood, sedates liver heat & dampness , benefits the eyes and vision problems, including dry eyes, red itching eyes, poor eyesight, photophobia, excessive tearing, blurring of vision, tearing against the wind, conjuctive congestion with pain and swelling of the eyes, and such eyes diseases as <b>Glucoma & Cataract</b>.
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
-
-            </section>
-            <section>
-                <h1><b>GREENLIFE HERBAL BALM</b></h1> <br>
-                <img src="red balm.jpeg" alt="red balm image" height="300px" width="300px" >
+                 <p class="price"> &#8358; 14,000 </p>
+                     <a href="order.html" class="btn  order-btn">Order Now</a>
+                </div>
+            </div>
+           </section>
+            <section id="balm">
+                <h2><b>GREENLIFE HERBAL BALM</b></h2> <br>
+              <div class="product-grid">
+                <div  class="product-card">
+                 <img src="red balm.jpeg" alt="red balm image" height="300px" width="300px" >
                 <p>
                     <h3><b>Red Herbal Liquid (Body Massage) </b></h3> <br>
                     <b>Function & Indications:</b> <br>
                     Used for new or old injuries from falls, rheumatic impediment pain, sinew and bone pain, bruise, lumbar and back pain. For the temporary relief of minor aches and pains of muscles and joints associated with simple backache, arthritis , strains , bruises and sprains.
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
-
-            </section>
-            <section>
-                <img src="white balm.png" alt="white balm image" height="300px" width="300px" >
+                 <p class="price"> &#8358; 11,500 </p>
+                       <a href="order.html" class="btn">Order Now</a>
+              </div>
+              <div class="product-card">
+                 <img src="white balm.png" alt="white balm image" height="300px" width="300px" >
                 <p>
                     <h3><b>Chinese White Herbal Balm (Family Health Guard)</b></h3> <br>
                     <b>Function & Indications:</b> <br>
                     wind-driving with high volatility, aromatic with herbal element. It can activates the blood circulation, relieve the muscle, remove the tiredness or pain, relax the mind and give a refreshing feeling. It can also detoxify mosquito bites while its aromatic smell can prevent mosquito's attacks. Hence, it has a broad  use,
                     <b>It is used for:</b> Body pain, mosquito or insects bite, tiredness, high mind tension, early stage cold or influenza, trip or boat sickness, lack of concentration on something and dizziness.
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
+                <p class="price"> &#8358; 7,000 </p>
+                     <a href="order.html" class="btn  order-btn">Order Now</a>
+              </div >
+              </div>
             </section>
-            <section>
-                <h1><b>GREENLIFE HERBAL TEA</b></h1>
+        <section id="tea">
+              <h2><b>GREENLIFE HERBAL TEA</b></h2>
+              <div   class="product-grid">
+                 <div class="product-card">
+           
                 <img src="anti col.PNG" alt="Anti col tea" height="300px" width="300px" >
                 <p>
                     <h3><b>Anticol Tea (Flu,Cold, Influenza)</b></h3> <br>
@@ -454,10 +549,11 @@
                     <b>Function & Indications:</b> <br>
                     Clearing heat , toxins from blood , activate and support the immune system during periods of fever. This product is recommended for fever and liver inflammation, influenza and common cold, headache , swollen and sore throat and cough , epidemic encephalitis, hepatitis, mumps or for general health.
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
-            </section>
-            <section>
-                <img src="royal tea.png" alt=" royal tea image" height="300px" width="300px" >
+                <p class="price"> &#8358; 15,500 </p>
+                       <a href="order.html" class="btn  order-btn">Order Now</a>
+           </div>
+           <div class="product-card">
+             <img src="royal tea.png" alt=" royal tea image" height="300px" width="300px" >
                 <p>
                     <h3><b>Chinese Royal Tea( Healthier Drink With Multiple Actions)</b></h3> <br>
                     <ul>
@@ -471,11 +567,11 @@
                         <li>Reducing sugar level.</li>
                     </ul>
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
-
-            </section>
-            <section>
-                <img src="angel tea.PNG" alt="image of angel tea" height="300px" width="300px" >
+                 <p class="price"> &#8358; 11,000 </p>
+                      <a href="order.html" class="btn  order-btn">Order Now</a>
+           </div>
+           <div class="product-card">
+             <img src="angel tea.PNG" alt="image of angel tea" height="300px" width="300px" >
                 <p>
                     <h3><b>Chinese Angel Tea(Multiple Actions) </b></h3> <br>
                     <b> Functions:</b> <br>
@@ -489,46 +585,39 @@
                         <li>Good for reduction of <b>High BP and Diabetic patients</b>.</li>
                     </ul>
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
-
-            </section>
-            <section>
-                <img src="dark tea.jpeg" alt="dark tea image" height="300px" width="300px">
+                 <p class="price"> &#8358; 11,000 </p>
+                       <a href="order.html" class="btn  order-btn">Order Now</a>
+           </div>
+           <div class="product-card">
+             <img src="dark tea.jpeg" alt="dark tea image" height="300px" width="300px">
                 <p>
                     <h3><b>Chinese Dark Tea</b></h3> <br>
                    Chinese natural concentrated Extract from fermented and dehydrated tea leaves. 100% natural drink to neutralize the fat and oil in food. Warmly balance the bacteria ecology in  the digestive tract.
                    Clears up the fat and sugar in the blood vessels. Anti lipemicm reducing sugar level and anti-aging. Good for fatty liver , <b>Diabetes patients</b>, and helps to prevent high blood pressure.
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
-
-
-            </section>
-            <section>
-                <img src="red tea.PNG" alt="red tea image" height="300px" width="300px">
+                 <p class="price"> &#8358; 8,000 </p>
+                       <a href="order.html" class="btn  order-btn">Order Now</a>
+           </div>
+           <div class="product-card">
+             <img src="red tea.PNG" alt="red tea image" height="300px" width="300px">
                 <p>
                     <h3><b>Greenlife Red Tea</b></h3> <br>
                     Chinese natural concentrated Extract from fermented and dehydrated tea leaves. <b><em>Used with Greenlife Angel Tea For Cure of Diabetes</em></b>. 100% natural drink to neutralize the fat and oil in food. Warmly balance the bacteria ecology in  the digestive tract.
                    Clears up the fat and sugar in the blood vessels. Anti lipemicm reducing sugar level and anti-aging. Good for fatty liver , <b>Diabetes patients</b>, and helps to prevent high blood pressure.
                 </p>
-                <a href="order.html"><button>ORDER NOW</button></a>
-
-            </section>
-
-
-
-
+                 <p class="price"> &#8358; 8,000 </p>
+                      <a href="order.html" class="btn  order-btn">Order Now</a>
+           </div>
+              </div>
+        </section>
 
         </div>
-        
-           
-        
-
-        
-
-    </main> <br>
-    <footer id="bottom">
-        <button> <a href="#top"> BACK TO TOP</a></button>
-
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <p><a href="#top" class="btn">Back to top</a></p>
+            <p class="muted">&copy; <span id="year">2026</span> Greenlife International</p>
+        </div>
     </footer>
     
 </body>

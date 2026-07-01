@@ -1,49 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Greenlife</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="/Website/styles2.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <img src="removed logo.png" alt="Greenlife logo" height="70px" width="70px">
-        <nav style="left: auto;">
-            <button> <a href="index.html"> HOME</a></button>
-            <button> <a href="order.html"> ORDER FORM</a></button>
-            <button> <a href="products.html"> OUR PRODUCTS</a></button>
-          </nav>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo"><img src="removed logo.png" alt="Greenlife logo"></a>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation"></button>
+            <nav id="main-nav" class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="intro.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="order.html">Order</a></li>
+                </ul>
+            </nav>
+            <div class="cart"><a href="order.html">Cart (<span id="cart-count">0</span>)</a></div>
+        </div>
     </header>
-    <main>
-        <article>
-            <img  src="ceo & chairman.jpeg" alt="CEO & CHAIRMAN OF GREENLIFE">
-            <p>Greenlife international is a global direct selling company with its manufacturing base in China.
-                It is mainly focused on manufacture,distribution of herbal, especially <b>TRADITIONAL CHINESE HERBAL PRODUCTS</b>
-                and other commodities through direct sales marketing.
-            </p>
-            <p>
-                Greenlife has estabilised a world class research development and marketing techniques in <b>CHINA</b>.
-                All researchers are from top <b>CHINESE MEDICINE COLLEGES AND UNIVERSITIES</b>  in China and also world class 
-                professors in <b>Herbal Medicine Industries</b>.
-            </p>
-            <p>
-                Its manufacture center is located in <b>Guangdong</b>. All fatories are <b>GMP</b> certified.
-                They all have been equipped with the most advance facility & machines. Well built standards and processing procedures are monitored 
-                and all steps are traceable. Best raw materials sources and <b>Quantity Control System</b>. Each product has its own <i>SOP</i>
-                <b>(Standard Operation Procedures)</b> standards , as well as national wide GMP standard and international HACCP Methods.
-            </p>
-            <p>
-                That leads to all product being well known in <b>China and other parts of the world</b>.
-                Because of its outstanding effectiveness, Greenlife Herbal since inception has been developing an amazing speed to now a multinational group. 
-                
-            </p>
-        </article>
 
-
+    <main class="container about-page">
+        <section class="intro">
+            <img class="intro-image" src="ceo & chairman.jpeg" alt="CEO & CHAIRMAN OF GREENLIFE">
+            <div class="intro-text">
+                <h1>About Greenlife</h1>
+                <p>Greenlife International is a global direct selling company with manufacturing in China. We specialize in high-quality Traditional Chinese Herbal Products and related commodities.</p>
+                <p>Our research and development team includes experts from top Chinese medicine colleges and industry leaders. All our factories follow GMP standards with strict SOPs and HACCP-aligned processes.</p>
+                <p>We combine traditional formulas with modern quality control to deliver products recognized in China and across the world.</p>
+            </div>
+        </section>
     </main>
-   <footer style="border: solid; text-align: center;">
-    <p>Best Of The Best! One Big Family!</p>
 
-   </footer>
+    <footer class="site-footer">
+        <div class="container">
+            <p>Best Of The Best — One Big Family.</p>
+        </div>
+    </footer>
 </body>
 </html>
